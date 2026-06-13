@@ -63,26 +63,8 @@
       color: var(--text);
       text-decoration: none;
       font-size: 1.1rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a[aria-current="page"],
-    .nav-links a:hover,
-    .nav-links a:focus {
-      color: var(--accent-strong);
+      pointer-events: none;
+      cursor: default;
     }
 
     main {
@@ -122,39 +104,6 @@
       font-size: clamp(1.05rem, 2.5vw, 1.25rem);
     }
 
-    .actions {
-      display: flex;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 0.75rem 1rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: var(--accent-strong);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .button.secondary {
-      background: transparent;
-      color: var(--accent-strong);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 1.25rem;
-    }
-
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -174,19 +123,6 @@
       color: var(--muted);
     }
 
-    .section {
-      margin-top: 2rem;
-    }
-
-    .section h2 {
-      margin-bottom: 0.8rem;
-      letter-spacing: -0.03em;
-    }
-
-    .bot-list {
-      padding-left: 1.25rem;
-    }
-
     .footer {
       max-width: 1040px;
       margin: 0 auto;
@@ -200,10 +136,6 @@
       .nav {
         align-items: flex-start;
         flex-direction: column;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
       }
 
       main {
@@ -220,14 +152,8 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="index.html">ukbigdaves bots</a>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="bots.html" aria-current="page">Bots</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-      </div>
+    <nav class="nav" aria-label="Page heading">
+      <span class="brand">ukbigdaves bots</span>
     </nav>
   </header>
 
@@ -240,13 +166,13 @@
 
     <section class="card notice">
       <h2>Install requests are closed</h2>
-      <p>Thank you for wanting to use one of these bots. At the moment, the bots are already operating at capacity supporting the servers they were built for, and ukbigdave does not have the time or support capacity needed to take on more communities.</p>
+      <p>Thank you for wanting to use one of these bots. At the moment, the bots are already operating at capacity supporting the servers they were built for, and ukbigdave does not have the time or support resources to expand them to additional communities.</p>
       <p>For that reason, there are no public invite links, waitlists, paid exceptions, or manual approval options available. This is a firm availability limit rather than a negotiable application process.</p>
     </section>
 
     <section>
       <h2>Why this policy exists</h2>
-      <p>The bots are maintained as a hobby and community project. Keeping them limited to their current servers helps protect reliability, moderation quality, privacy expectations, and the time needed to support the communities already using them.</p>
+      <p>The bots are maintained as a hobby and community project. Keeping them limited to their current servers helps protect reliability, moderation quality, privacy expectations, and the time needed to maintain the services responsibly.</p>
     </section>
 
     <section>
