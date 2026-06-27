@@ -3,157 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bot availability and installation information for ukbigdaves bots.">
-  <title>Bot Availability | ukbigdaves bots</title>
+  <meta name="description" content="Bot availability and installation information for ukbigdave.dev Discord applications.">
+  <title>Bot Availability | ukbigdave.dev</title>
   <style>
-    :root {
-      color-scheme: light;
-      --bg: #f6f7f9;
-      --surface: #ffffff;
-      --text: #20242a;
-      --muted: #5f6975;
-      --border: #d9dee5;
-      --accent: #40566d;
-      --accent-strong: #26394d;
-      --shadow: 0 18px 45px rgba(32, 36, 42, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: linear-gradient(180deg, #eef1f5 0%, var(--bg) 38%, #ffffff 100%);
-    }
-
-    a {
-      color: var(--accent-strong);
-      text-decoration-thickness: 0.08em;
-      text-underline-offset: 0.2em;
-    }
-
-    a:hover,
-    a:focus {
-      color: #111827;
-    }
-
-    .site-header {
-      border-bottom: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.9);
-    }
-
-    .nav {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 1rem 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-weight: 750;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 1.1rem;
-      pointer-events: none;
-      cursor: default;
-    }
-
-    main {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 3rem 1.25rem;
-    }
-
-    .hero {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: clamp(2rem, 5vw, 4rem);
-    }
-
-    .eyebrow {
-      margin: 0 0 0.75rem;
-      color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.15rem, 6vw, 4.2rem);
-      line-height: 1.05;
-      letter-spacing: -0.05em;
-    }
-
-    .lead {
-      max-width: 720px;
-      margin: 1.25rem 0 0;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 1.25rem;
-    }
-
-    .card h2,
-    .card h3 {
-      margin: 0 0 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .card p,
-    .card ul {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .footer {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 2rem 1.25rem 3rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 760px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      main {
-        padding-top: 2rem;
-      }
-    }
-
+    :root { color-scheme: light; --bg: #f6f7f9; --surface: #fff; --text: #20242a; --muted: #5f6975; --border: #d9dee5; --accent: #40566d; --accent-strong: #26394d; --shadow: 0 18px 45px rgba(32,36,42,.08); }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; color: var(--text); background: linear-gradient(180deg, #eef1f5 0%, var(--bg) 38%, #fff 100%); }
+    a { color: var(--accent-strong); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+    a:hover, a:focus { color: #111827; }
+    .site-header { border-bottom: 1px solid var(--border); background: rgba(255,255,255,.9); }
+    .nav { max-width: 1040px; margin: 0 auto; padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .brand { font-weight: 750; letter-spacing: -.02em; color: var(--text); text-decoration: none; font-size: 1.1rem; }
+    .nav-links { display: flex; gap: .9rem; flex-wrap: wrap; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: .95rem; }
+    .nav-links a[aria-current="page"], .nav-links a:hover, .nav-links a:focus { color: var(--accent-strong); }
+    main { max-width: 1040px; margin: 0 auto; padding: 3rem 1.25rem; }
+    .hero, .card { background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .hero { border-radius: 24px; padding: clamp(2rem, 5vw, 4rem); }
+    .card { border-radius: 18px; padding: 1.25rem; }
+    .eyebrow { margin: 0 0 .75rem; color: var(--accent); font-size: .85rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.15rem, 6vw, 4.2rem); line-height: 1.05; letter-spacing: -.05em; }
+    .lead { max-width: 760px; margin: 1.25rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.25rem); }
     .document { max-width: 860px; }
     .document section { margin-top: 1.8rem; }
-    .document h2 { margin-bottom: 0.5rem; letter-spacing: -0.025em; }
+    .document h2 { margin-bottom: .5rem; letter-spacing: -.025em; }
     .document p, .document li { color: var(--muted); }
     .notice { border-left: 4px solid var(--accent); }
+    .footer { max-width: 1040px; margin: 0 auto; padding: 2rem 1.25rem 3rem; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--border); }
+    @media (max-width: 760px) { .nav { align-items: flex-start; flex-direction: column; } main { padding-top: 2rem; } }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Page heading">
-      <span class="brand">ukbigdaves bots</span>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">ukbigdave.dev</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="bots.html" aria-current="page">Bot Availability</a>
+      </div>
     </nav>
   </header>
 
@@ -161,24 +50,16 @@
     <section class="hero">
       <p class="eyebrow">Bot availability</p>
       <h1>Thanks for your interest</h1>
-      <p class="lead">ukbigdaves bots are private community bots and are not currently available for installation on additional Discord servers.</p>
+      <p class="lead">Discord bots operated through ukbigdave.dev are private community bots and are not currently available for installation on additional Discord servers.</p>
     </section>
 
-    <section class="card notice">
-      <h2>Install requests are closed</h2>
-      <p>Thank you for wanting to use one of these bots. At the moment, the bots are already operating at capacity supporting the servers they were built for, and ukbigdave does not have the time or support resources to expand them to additional communities.</p>
-      <p>For that reason, there are no public invite links, waitlists, paid exceptions, or manual approval options available. This is a firm availability limit rather than a negotiable application process.</p>
-    </section>
-
-    <section>
-      <h2>Why this policy exists</h2>
-      <p>The bots are maintained as a hobby and community project. Keeping them limited to their current servers helps protect reliability, moderation quality, privacy expectations, and the time needed to maintain the services responsibly.</p>
-    </section>
-    
+    <section class="card notice"><h2>Install requests are closed</h2><p>Thank you for wanting to use one of these bots. At the moment, the bots are already operating at capacity supporting the servers they were built for, and ukbigdave does not have the time or support resources to expand them to additional communities.</p><p>For that reason, there are no public invite links, waitlists, paid exceptions, or manual approval options available. This is a firm availability limit rather than a negotiable application process.</p></section>
+    <section><h2>Why this policy exists</h2><p>The bots are maintained as a hobby and community project. Keeping them limited to their current servers helps protect reliability, moderation quality, privacy expectations, and the time needed to maintain the services responsibly.</p></section>
+    <section><h2>Need help?</h2><p>For privacy, support, or legal questions about the existing services, contact <a href="mailto:contact@ukbigdave.dev">contact@ukbigdave.dev</a>.</p></section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 ukbigdave. ukbigdaves bots. Last Updated: 13 June 2026.</p>
+    <p>&copy; 2026 ukbigdave. ukbigdave.dev. Last Updated: 27 June 2026.</p>
   </footer>
 </body>
 </html>
