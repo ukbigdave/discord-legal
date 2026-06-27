@@ -3,22 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Terms of Service for ukbigdaves bots Discord applications operated by ukbigdave.">
-  <title>Terms of Service | ukbigdaves bots</title>
+  <meta name="description" content="Terms of Service for ukbigdave.dev Discord applications operated by ukbigdave.">
+  <title>Terms of Service | ukbigdave.dev</title>
+  <style>
+    :root { color-scheme: light; --bg: #f6f7f9; --surface: #fff; --text: #20242a; --muted: #5f6975; --border: #d9dee5; --accent: #40566d; --accent-strong: #26394d; --shadow: 0 18px 45px rgba(32,36,42,.08); }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; color: var(--text); background: linear-gradient(180deg, #eef1f5 0%, var(--bg) 38%, #fff 100%); }
+    a { color: var(--accent-strong); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+    a:hover, a:focus { color: #111827; }
+    .site-header { border-bottom: 1px solid var(--border); background: rgba(255,255,255,.9); }
+    .nav { max-width: 1040px; margin: 0 auto; padding: 1rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .brand { font-weight: 750; letter-spacing: -.02em; color: var(--text); text-decoration: none; font-size: 1.1rem; }
+    .nav-links { display: flex; gap: .9rem; flex-wrap: wrap; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: .95rem; }
+    .nav-links a[aria-current="page"], .nav-links a:hover, .nav-links a:focus { color: var(--accent-strong); }
+    main { max-width: 1040px; margin: 0 auto; padding: 3rem 1.25rem; }
+    .hero, .card { background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .hero { border-radius: 24px; padding: clamp(2rem, 5vw, 4rem); }
+    .card { border-radius: 18px; padding: 1.25rem; }
+    .eyebrow { margin: 0 0 .75rem; color: var(--accent); font-size: .85rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.15rem, 6vw, 4.2rem); line-height: 1.05; letter-spacing: -.05em; }
+    .lead { max-width: 760px; margin: 1.25rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.25rem); }
+    .document { max-width: 860px; }
+    .document section { margin-top: 1.8rem; }
+    .document h2 { margin-bottom: .5rem; letter-spacing: -.025em; }
+    .document p, .document li { color: var(--muted); }
+    .notice { border-left: 4px solid var(--accent); }
+    .footer { max-width: 1040px; margin: 0 auto; padding: 2rem 1.25rem 3rem; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--border); }
+    @media (max-width: 760px) { .nav { align-items: flex-start; flex-direction: column; } main { padding-top: 2rem; } }
+  </style>
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html">ukbigdave.dev</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" aria-current="page">Terms of Service</a>
+        <a href="bots.html">Bot Availability</a>
+      </div>
+    </nav>
+  </header>
+
   <main class="document">
     <section class="hero">
-      <p class="eyebrow">ukbigdaves bots</p>
+      <p class="eyebrow">ukbigdave.dev</p>
       <h1>Terms of Service</h1>
       <p class="lead">These terms apply to use of Discord bots and applications operated by ukbigdave, including Brock, DaveBot, Decko, DMforHelp, Nio, PoGo Raids, Pokémon GO Raids, Premier raids, PremierBot, PremierRaidsStaff, and The Raiders Club.</p>
-      <p><strong>Last Updated:</strong> 13 June 2026</p>
+      <p><strong>Last Updated:</strong> 27 June 2026</p>
     </section>
 
-    <section>
-      <h2>9. Contact</h2>
-      <p>Questions about these Terms of Service can be sent to <a href="mailto:contact@ukbigdave.dev">contact@ukbigdave.dev</a>.</p>
-    </section>
+    <section><h2>1. Acceptance</h2><p>By using these Discord bots or applications, you agree to follow these terms and any applicable Discord rules, server rules, and community guidelines.</p></section>
+    <section><h2>2. Intended use</h2><p>The bots are provided for community support, Pokémon GO raid organisation, moderation assistance, role assignment, commands, automation, and related Discord utilities.</p></section>
+    <section><h2>3. Availability</h2><p>The services are provided as a hobby and community project. Features may change, be interrupted, or be withdrawn at any time. Public installation on additional Discord servers is not currently available.</p></section>
+    <section><h2>4. User responsibilities</h2><p>You must not abuse, disrupt, reverse engineer, spam, exploit, or attempt to bypass limits in the bots. You are responsible for following the rules of any Discord server where the bots are used.</p></section>
+    <section><h2>5. Server administrator responsibilities</h2><p>Server owners and administrators are responsible for configuring bot features appropriately for their communities and for explaining relevant server-specific rules or logging practices to members where needed.</p></section>
+    <section><h2>6. Data and privacy</h2><p>Use of the bots is also governed by the <a href="privacy.html">Privacy Policy</a>, which explains what information may be processed and how to request deletion where applicable.</p></section>
+    <section><h2>7. Limitation of liability</h2><p>The bots are provided without warranties. To the fullest extent permitted by law, ukbigdave is not liable for losses, damages, outages, missed raids, moderation outcomes, or server issues arising from use of the bots.</p></section>
+    <section><h2>8. Changes to these terms</h2><p>These terms may be updated as the bots, domain, or legal requirements change. The latest version will be published on ukbigdave.dev.</p></section>
+    <section><h2>9. Contact</h2><p>Questions about these Terms of Service can be sent to <a href="mailto:contact@ukbigdave.dev">contact@ukbigdave.dev</a>.</p></section>
   </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 ukbigdave. ukbigdave.dev. Last Updated: 27 June 2026.</p>
+  </footer>
 </body>
 </html>
