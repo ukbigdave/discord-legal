@@ -1,117 +1,206 @@
-Analyse this Discord bot repository and create a concise verification evidence document that I can use to build a Discord privileged-intent review webpage.
+Analyse this entire Discord bot repository and produce TWO Markdown files.
 
-Do not modify the bot code.
+Do not modify any code.
 
-Create a Markdown file named:
+Before producing either document, inspect the entire repository to determine exactly which privileged Gateway Intents are genuinely required.
 
-DISCORD_VERIFICATION_EVIDENCE.md
+Do not assume an intent is required simply because it is enabled in the Discord client. Trace the implementation and only include intents that are actually used by features within the bot.
 
-Required output
+Search the repository for:
 
-1. Bot summary
+- Discord client initialisation
+- Enabled Gateway Intents
+- Event handlers
+- Slash commands
+- Message handlers
+- Scheduled/background tasks
+- Database usage
+- Logging
+- Presence handling
+- Member handling
+- Message processing
 
-Provide:
+Trace the code paths that depend on each privileged intent.
 
-* Bot name
-* High-level description of what the bot does
-* Main user groups or servers it supports
-* Whether it uses slash commands, message commands, events, scheduled tasks or background processing
+Do not expose secrets, tokens or configuration values.
 
-Do not invent information that is not present in the repository.
+---
 
-2. Privileged intents
+# File 1
 
-Identify whether the bot requires any of:
+Create:
 
-* GUILD_MEMBERS
-* MESSAGE_CONTENT
-* GUILD_PRESENCES
+discord_intent_application.md
 
-For each required intent, provide:
+This document should contain ONLY the information required to complete Discord's Privileged Intent application form.
 
-* Why the intent is technically required
-* The exact features that depend on it
-* Relevant Discord events, client methods or code paths
-* What would stop working without the intent
-* Why a non-privileged alternative is insufficient
+Follow the order of the Discord application.
 
-Include relevant source file names and function names.
+## Application Details
 
-Do not claim an intent is required merely because it is enabled in the client configuration. Confirm that repository features actually use it.
+Provide a concise description of:
 
-3. Suggested screenshots
+- what the bot does
+- who uses it
+- major functionality
+- why privileged intents are required overall
 
-For each intent, propose 2–5 screenshots that would clearly prove the feature to a Discord reviewer.
+Target approximately 1,500–2,000 characters.
 
-For each screenshot, specify:
+Do not include unnecessary implementation detail.
 
-* What action should be performed
-* What should be visible before the action
-* What result should be visible afterwards
-* Which Discord channel, role, command, log or audit entry should be shown
-* A suggested file name
+---
 
-Use names such as:
+## Required Privileged Intents
 
-01-member-joins.png
-02-role-granted.png
-03-sync-log.png
+Only include intents that are actually required.
 
-4. Suggested evidence flow
+For EACH required intent provide concise answers for every Discord form field.
 
-Describe the simplest test sequence I can perform to capture the screenshots.
+### Why do you need this intent?
 
-Example:
+Explain:
 
-1. Give a test user the source role.
-2. Join or update the linked server member.
-3. Show the resulting role in the destination server.
-4. Show the bot log confirming the synchronisation.
+- which feature requires it
+- which Discord events/API are used
+- why the intent is technically required
+- what would stop working without it
+- why a non-privileged alternative is insufficient
 
-5. Data handling
+Target 800–2,000 characters.
 
-Based only on the repository, identify:
+---
 
-* Discord data read
-* Data stored
-* Database tables or files used
-* Whether message content is stored or only processed temporarily
-* Logging performed
-* Any visible retention or deletion logic
+### Screenshots
 
-Clearly mark anything that cannot be confirmed.
+Provide only a short list of screenshots that should be linked from the supporting webpage.
 
-6. Reviewer-ready copy
+For each screenshot include:
 
-Finish with concise website-ready wording containing:
+- title
+- one sentence describing what it demonstrates
 
-* A short bot summary
-* One section per required privileged intent
-* Why each intent is required
-* Features using it
-* Data accessed
-* Whether the data is stored
-* A short reviewer summary
+Do NOT describe testing procedures.
 
-Keep this section concise enough to fit comfortably on one webpage.
+---
 
-7. Missing information
+### Discord form questions
 
-List anything that must be supplied manually, such as:
+Where applicable, determine from the repository whether:
 
-* Discord application ID
-* Contact email
-* Privacy policy URL
-* Terms URL
-* Data-retention period
-* External services not visible in the repository
-* Screenshots or video links
+- API data is stored off-platform
+- Member data is stored
+- Presence data is stored
+- Message content is stored
+- Message content is used for AI or ML training
+- Users can opt out
 
-Accuracy requirements
+Only answer if it can be determined from the repository.
 
-* Inspect the full repository before producing the document.
-* Search for Discord client intent configuration and all related event handlers.
-* Trace feature usage rather than relying only on filenames.
-* Distinguish required intents from intents that are enabled but apparently unused.
-* Do not expose secrets, tokens, credentials or private configuration values.
-* Do not include real Discord user IDs, server IDs or channel IDs unless essential; describe them generically instead.
+Otherwise write:
+
+**Manual answer required**
+
+---
+
+Keep every answer concise and suitable for directly copying into the Discord Developer Portal text boxes.
+
+---
+
+# File 2
+
+Create:
+
+discord_intent_supporting.md
+
+This document will become a GitHub Pages verification page for Discord reviewers.
+
+Keep the entire document concise.
+
+Assume the reviewer will spend less than two minutes reading it.
+
+Avoid unnecessary implementation detail.
+
+Use the following structure.
+
+# Bot Overview
+
+Briefly describe:
+
+- what the bot does
+- who uses it
+- major features
+
+Maximum 250 words.
+
+---
+
+# Required Privileged Intents
+
+Only include intents confirmed as required.
+
+For each intent include:
+
+## Why this intent is required
+
+One or two short paragraphs.
+
+## Features using this intent
+
+Short bullet list.
+
+## Data accessed
+
+Short bullet list.
+
+## Data stored
+
+Clearly state whether the data is:
+
+- not stored
+- temporarily processed
+- stored
+
+If stored, briefly explain what and why.
+
+## Supporting screenshots
+
+Provide a concise list of screenshots that should appear on the page.
+
+For each screenshot include:
+
+- title
+- one sentence explaining what it demonstrates
+
+Do not describe testing procedures.
+
+---
+
+# Privacy Summary
+
+Summarise:
+
+- what Discord data is processed
+- what is retained
+- what is not retained
+
+Keep this brief.
+
+---
+
+# Reviewer Summary
+
+Finish with a short paragraph explaining why the privileged intents are necessary, how they are used, and why they are the minimum required for the bot's functionality.
+
+---
+
+# Accuracy Requirements
+
+- Inspect the full repository before producing either document.
+- Confirm intent usage by tracing the implementation.
+- Ignore intents that are enabled but unused.
+- Do not invent features.
+- Do not invent stored data.
+- Clearly mark anything that cannot be confirmed from the repository.
+- Do not expose secrets, credentials or private configuration.
+- Write both documents specifically to maximise the likelihood of Discord privileged intent approval while remaining completely accurate to the implementation.
