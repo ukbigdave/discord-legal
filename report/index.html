@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Report a Critical Discord Problem | ukbigdave.dev</title>
+  <style>
+    :root { color-scheme: light; --bg: #f6f7f9; --surface: #fff; --text: #20242a; --muted: #5f6975; --border: #d9dee5; --accent: #40566d; --accent-strong: #26394d; --shadow: 0 18px 45px rgba(32,36,42,.08); --critical: #a13d2d; --critical-bg: #fff8f5; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; color: var(--text); background: linear-gradient(180deg, #eef1f5 0%, var(--bg) 38%, #fff 100%); }
+    .site-header { border-bottom: 1px solid var(--border); background: rgba(255,255,255,.9); }
+    .header-inner { max-width: 860px; margin: 0 auto; padding: 1rem 1.25rem; }
+    .brand { font-weight: 750; letter-spacing: -.02em; color: var(--text); text-decoration: none; font-size: 1.1rem; }
+    .brand:hover, .brand:focus { color: var(--accent-strong); }
+    main { max-width: 860px; margin: 0 auto; padding: 3rem 1.25rem; }
+    .hero, .card { background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); }
+    .hero { border-radius: 24px; padding: clamp(2rem, 5vw, 4rem); }
+    .card { border-radius: 18px; padding: clamp(1.25rem, 4vw, 2rem); margin-top: 1.5rem; }
+    .eyebrow { margin: 0 0 .75rem; color: var(--accent); font-size: .85rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.15rem, 6vw, 4.2rem); line-height: 1.05; letter-spacing: -.05em; }
+    .lead { max-width: 760px; margin: 1.25rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 2.5vw, 1.25rem); }
+    .critical-notice { border-left: 4px solid var(--critical); background: var(--critical-bg); }
+    .critical-notice h2 { margin: 0 0 .5rem; color: var(--critical); font-size: 1.15rem; letter-spacing: .04em; }
+    .critical-notice p { margin: .6rem 0 0; }
+    .form-intro { margin: 0 0 1.5rem; color: var(--muted); }
+    .field { margin-top: 1.35rem; }
+    label { display: block; margin-bottom: .4rem; font-weight: 700; }
+    input, select, textarea { width: 100%; min-height: 48px; padding: .7rem .8rem; border: 1px solid #aeb7c2; border-radius: 10px; color: var(--text); background: #fff; font: inherit; }
+    textarea { min-height: 180px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); outline: 3px solid rgba(64,86,109,.18); outline-offset: 1px; }
+    .helper { margin: .35rem 0 0; color: var(--muted); font-size: .92rem; }
+    .required { color: var(--critical); }
+    button { min-height: 48px; margin-top: 1.75rem; padding: .75rem 1.2rem; border: 1px solid var(--accent-strong); border-radius: 999px; background: var(--accent-strong); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+    button:hover { background: #17283a; }
+    button:focus { outline: 3px solid rgba(64,86,109,.3); outline-offset: 2px; }
+    .expectations { border-left: 4px solid var(--accent); }
+    .expectations h2 { margin: 0 0 .5rem; font-size: 1.2rem; letter-spacing: -.02em; }
+    .expectations p { margin: .5rem 0 0; color: var(--muted); }
+    .footer { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 3rem; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--border); }
+    @media (max-width: 600px) { main { padding-top: 2rem; } .hero { padding: 1.5rem; } .card { padding: 1.25rem; } button { width: 100%; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner"><a class="brand" href="../index.html">ukbigdave.dev</a></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Discord service report</p>
+      <h1>Report a Critical Discord Problem</h1>
+    </section>
+
+    <section class="card critical-notice" aria-labelledby="critical-heading">
+      <h2 id="critical-heading">CRITICAL ISSUES ONLY</h2>
+      <p>Use this form if one of our Discord bots or services appears to be seriously broken or unavailable — for example, a bot appears to be offline, a core function has stopped working, or the same problem is affecting multiple users.</p>
+      <p><strong>For general support, questions, feature requests or suggestions, please use the Dave Support server as usual.</strong></p>
+    </section>
+
+    <form class="card" action="https://formspree.io/f/mjykpbgw" method="POST">
+      <p class="form-intro">Please provide enough information for us to investigate the problem. All fields are required.</p>
+
+      <div class="field">
+        <label for="server">Discord server <span class="required" aria-hidden="true">*</span></label>
+        <select id="server" name="server" required>
+          <option value="" selected disabled>Select a server</option>
+          <option>Pokémon GO</option>
+          <option>PoGO</option>
+          <option>Premier</option>
+          <option>Other / Not sure</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="service">What are you having trouble with? <span class="required" aria-hidden="true">*</span></label>
+        <select id="service" name="service" required>
+          <option value="" selected disabled>Select a service or bot</option>
+          <option>Nio — Raids</option>
+          <option>Brock — Server features</option>
+          <option>OCR / Screenshots</option>
+          <option>Patreon / Roles</option>
+          <option>Other / Not sure</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="discord-username">Discord username <span class="required" aria-hidden="true">*</span></label>
+        <input id="discord-username" name="discord_username" type="text" autocomplete="username" required aria-describedby="username-help">
+        <p class="helper" id="username-help">Enter the username you use on Discord.</p>
+      </div>
+
+      <div class="field">
+        <label for="when">When did it happen? <span class="required" aria-hidden="true">*</span></label>
+        <select id="when" name="when" required>
+          <option value="" selected disabled>Select a time</option>
+          <option>Just now</option>
+          <option>Within the last hour</option>
+          <option>Earlier today</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="still-happening">Is the problem still happening? <span class="required" aria-hidden="true">*</span></label>
+        <select id="still-happening" name="still_happening" required>
+          <option value="" selected disabled>Select an answer</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="impact">How widespread does the problem appear to be? <span class="required" aria-hidden="true">*</span></label>
+        <select id="impact" name="impact" required aria-describedby="impact-help">
+          <option value="" selected disabled>Select the observed impact</option>
+          <option>One raid / screenshot / function appears affected</option>
+          <option>More than one user or function appears affected</option>
+          <option>Lots of users are reporting the same problem</option>
+          <option>The bot/service appears completely unavailable</option>
+          <option>Not sure</option>
+        </select>
+        <p class="helper" id="impact-help">Please select what you have actually observed rather than guessing.</p>
+      </div>
+
+      <div class="field">
+        <label for="problem">What happened? <span class="required" aria-hidden="true">*</span></label>
+        <textarea id="problem" name="problem" required aria-describedby="problem-help"></textarea>
+        <p class="helper" id="problem-help">Tell us what you were trying to do, what you expected to happen, and what actually happened. Include any error message you saw.</p>
+      </div>
+
+      <button type="submit">Submit critical issue</button>
+    </form>
+
+    <section class="card expectations" aria-labelledby="expectations-heading">
+      <h2 id="expectations-heading">What to expect</h2>
+      <p>Reports are reviewed when necessary. You may not receive an individual response. Temporary Discord outages can affect the bots and normally resolve without intervention.</p>
+      <p>Routine support, questions, feature requests and suggestions should continue to use the Dave Support server.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 ukbigdave. ukbigdave.dev.</p>
+  </footer>
+</body>
+</html>
